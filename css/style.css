@@ -142,39 +142,41 @@ ul.menu li img
 
 .red
 {
-	border-left:4px solid #DE6262;
+	border-right:2px solid #DE6262;
+    padding-right:2px;
 }
 
 .light-blue
 {
-	border-left:4px solid #48A9EC;
+	border-right:2px solid #48A9EC;
+    padding-right:2px;
 }
 
 .green
 {
-	border-left:4px solid #21AA18;
+	border-right:2px solid #21AA18;
 }
 
 .yellow
 {
-	border-left:4px solid #FFF14A;
+	border-right:2px solid #FFF14A;
 }
 
 .orange
 {
-	border-left:4px solid #FF904A;
+	border-right:2px solid #FF904A;
 }
 
 .violete
 {
-	border-left:4px solid #FF38BE;
+	border-right:2px solid #FF38BE;
 }
 
 #content
 {
-	border-left:3px solid #ddd;
+	border-left:1px solid #48A9EC;
 	margin-top:-10px;
-	height:450px;
+	min-height:450px;
 }
 
 #content #title_panel
@@ -202,7 +204,7 @@ ul.menu li img
 
 #content.red-content
 {
-	border-top:4px solid #DE6262;
+	border-top:2px solid #48A9EC;
 }
 
 
