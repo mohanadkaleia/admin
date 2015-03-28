@@ -13,10 +13,19 @@
 
 		<!-- load css -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
 		<link rel="stylesheet" media="all" type="text/css" href="css/style.css" />
+
 
         <!-- load fonts -->
         <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+
+        <!-- Latest compiled and minified JavaScript -->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	</head>
 
 	<body>
@@ -64,11 +73,58 @@
 
 					<!-- title panel -->
 					<div id="title_panel">
-						<h3>Club Activity</h3>
+						<h3>Dashboard</h3>
 					</div>
 
 					<!-- content -->
-					<div >
+					<div>
+
+                        <div class="row">
+                            <!-- states charts -->
+                            <div class="col-md-8">
+                                <div class="panel panel-default ">
+                                  <div class="panel-heading">Sales Stats</div>
+                                  <div class="panel-body">
+                                      <!-- Line chart -->
+                                      <div id="donut-example" style="height: 200px;"></div>
+
+                                  </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="panel panel-default ">
+                                  <div class="panel-heading">Usage stats</div>
+                                    <div class="panel-body">
+                                        <table class="stats">
+                                            <tr>
+                                                <td>Google chrome</td><td><span class="label label-success">42.8%</span></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>Firefox</td><td><span class="label label-primary">17.2%</span></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>Safari</td><td><span class="label label-info">15.5%</span></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>Internet Explorer</td><td><span class="label label-warning">15.5%</span></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>Others</td><td><span class="label label-danger">9%</span></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
 
 					</div>
 				</div>
@@ -80,7 +136,20 @@
 
 
 
+        <script>
 
+
+
+       new Morris.Donut({
+          element: 'donut-example',
+          data: [
+            {label: "Download Sales", value: 12},
+            {label: "In-Store Sales", value: 30},
+            {label: "Mail-Order Sales", value: 20}
+          ]
+        });
+
+	</script>
 
 	</body>
 
