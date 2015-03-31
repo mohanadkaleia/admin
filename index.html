@@ -15,6 +15,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
 		<link rel="stylesheet" media="all" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" media="all" type="text/css" href="css/gridview.css" />
 
 
         <!-- load fonts -->
@@ -79,23 +80,25 @@
 					<!-- content -->
 					<div>
 
+                        <!-- Sales stats & usage stats -->
                         <div class="row">
                             <!-- states charts -->
                             <div class="col-md-8">
-                                <div class="panel panel-default ">
+                                <div class="panel panel-default">
                                   <div class="panel-heading">Sales Stats</div>
                                   <div class="panel-body">
-                                      <!-- Line chart -->
-                                      <div id="donut-example" style="height: 200px;"></div>
-
+                                      <!-- area chart -->
+                                      <div id="area-example" style="height:200px;"></div>
                                   </div>
                                 </div>
                             </div>
 
+
+                            <!-- usage stats -->
                             <div class="col-md-4">
                                 <div class="panel panel-default ">
                                   <div class="panel-heading">Usage stats</div>
-                                    <div class="panel-body">
+                                    <div class="panel-body" style="height:230px;">
                                         <table class="stats">
                                             <tr>
                                                 <td>Google chrome</td><td><span class="label label-success">42.8%</span></td>
@@ -117,13 +120,73 @@
                                                 <td>Others</td><td><span class="label label-danger">9%</span></td>
                                             </tr>
                                         </table>
-                                    </div>
-                                </div>
+                                    </div> <!-- end of panel body -->
+                                </div> <!-- end of panel -->
+                            </div> <!-- end of column -->
+                        </div> <!-- end of row -->
+
+
+                            <div class="panel panel-default">
+                              <div class="panel-heading">New orders</div>
+                              <div class="panel-body">
+                                  <!-- area chart -->
+                                  <table class="grid" width="100%">
+                                      <tr>
+                                          <th>#</th>
+                                          <th>Employee Name</th>
+                                          <th>Age</th>
+                                          <th>Salary</th>
+                                          <th>Hire date</th>
+                                          <th>Details</th>
+                                      </tr>
+
+                                      <tr>
+                                          <td align="center">1</td>
+                                          <td>Mohanad Kaleia</td>
+                                          <td>26</td>
+                                          <td>800$</td>
+                                          <td>01/08/2014</td>
+                                          <td>view</td>
+                                      </tr>
+
+                                      <tr>
+                                          <td align="center">2</td>
+                                          <td>Rami Aqqad</td>
+                                          <td>27</td>
+                                          <td>850$</td>
+                                          <td>01/01/2015</td>
+                                          <td>view</td>
+                                      </tr>
+
+                                      <tr>
+                                          <td align="center">3</td>
+                                          <td>Mohanad Kaleia</td>
+                                          <td>26</td>
+                                          <td>800$</td>
+                                          <td>01/08/2014</td>
+                                          <td>view</td>
+                                      </tr>
+
+                                      <tr>
+                                          <td align="center">4</td>
+                                          <td>Jone Doe</td>
+                                          <td>41</td>
+                                          <td>1200$</td>
+                                          <td>01/08/2014</td>
+                                          <td>view</td>
+                                      </tr>
+
+                                      <tr>
+                                          <td align="center">5</td>
+                                          <td>Mohanad Kaleia</td>
+                                          <td>26</td>
+                                          <td>800$</td>
+                                          <td>01/08/2014</td>
+                                          <td>view</td>
+                                      </tr>
+                                  </table>
+                              </div>
                             </div>
-
-
-                        </div>
-
 
 
 					</div>
@@ -140,13 +203,22 @@
 
 
 
-       new Morris.Donut({
-          element: 'donut-example',
+       Morris.Area({
+          element: 'area-example',
           data: [
-            {label: "Download Sales", value: 12},
-            {label: "In-Store Sales", value: 30},
-            {label: "Mail-Order Sales", value: 20}
-          ]
+            { y: '2006', a: 25, b: 10 },
+            { y: '2007', a: 50,  b: 40 },
+            { y: '2008', a: 55,  b: 40 },
+            { y: '2009', a: 75,  b: 65 },
+            { y: '2010', a: 50,  b: 40 },
+            { y: '2011', a: 75,  b: 65 },
+            { y: '2012', a: 100, b: 90 }
+          ],
+          xkey: 'y',
+          ykeys: ['a', 'b'],
+          labels: ['Series A', 'Series B'],
+          resize: true
+
         });
 
 	</script>
