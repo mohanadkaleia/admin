@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="description" content="OIPULES admin panel" />
+	    <meta name="abstract" content="OIPULES admin panel" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="fav_icon.ico" rel="shortcut icon" type="image/x-icon" />
+
+		<title>OPILUS - Schedule</title>
+
+		<!-- load css -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+		<link rel="stylesheet" media="all" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" media="all" type="text/css" href="css/gridview.css" />
+        <link rel="stylesheet" media="all" type="text/css" href="css/fullcalendar.css" />
+        <link rel="stylesheet" media="print" type="text/css" href="css/fullcalendar.print.css"/>
+
+
+        <!-- load fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+
+        <!-- Latest compiled and minified JavaScript -->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script src="js/moment.min.js"></script>
+        <script src="js/fullcalendar.min.js"></script>
+        <script>
+
+            $(document).ready(function() {
+
+                $('#calendar').fullCalendar({
+                    header: {
+                        left: 'prev,next today',
+                        center: 'title',
+                        right: 'month,basicWeek,basicDay'
+                    },
+                    defaultDate: '2015-02-12',
+                    editable: true,
+                    eventLimit: true, // allow "more" link when too many events
+                    events: [
+                        {
+                            title: 'All Day Event',
+                            start: '2015-02-01'
+                        },
+                        {
+                            title: 'Long Event',
+                            start: '2015-02-07',
+                            end: '2015-02-10'
+                        },
+                        {
+                            id: 999,
+                            title: 'Repeating Event',
+                            start: '2015-02-09T16:00:00'
+                        },
+                        {
+                            id: 999,
+                            title: 'Repeating Event',
+                            start: '2015-02-16T16:00:00'
+                        },
+                        {
+                            title: 'Conference',
+                            start: '2015-02-11',
+                            end: '2015-02-13'
+                        },
+                        {
+                            title: 'Meeting',
+                            start: '2015-02-12T10:30:00',
+                            end: '2015-02-12T12:30:00'
+                        },
+                        {
+                            title: 'Lunch',
+                            start: '2015-02-12T12:00:00'
+                        },
+                        {
+                            title: 'Meeting',
+                            start: '2015-02-12T14:30:00'
+                        },
+                        {
+                            title: 'Happy Hour',
+                            start: '2015-02-12T17:30:00'
+                        },
+                        {
+                            title: 'Dinner',
+                            start: '2015-02-12T20:00:00'
+                        },
+                        {
+                            title: 'Birthday Party',
+                            start: '2015-02-13T07:00:00'
+                        },
+                        {
+                            title: 'Click for Google',
+                            url: 'http://google.com/',
+                            start: '2015-02-28'
+                        }
+                    ]
+                });
+
+            });
+
+        </script>
+	</head>
+
+	<body>
+
+
+			<header>
+				<div id="index_menu">
+
+				</div>
+
+				<div id="tool_bar">
+					<p class="title">
+						Opilus Admin Panel
+					</p>
+
+
+					<ul class="menu">
+                        <li><input type="search" class="searchBox" placeholder="Search.."/></li>
+						<li><a href="#">Help Support</a></li>
+						<li><a href="#">Settings</a></li>
+						<li class="active"><img src="images/john_doe.jpg"/><a href="#">Mohanad Kaleia</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-off"></i></a></li>
+					</ul>
+				</div>
+			</header>
+
+
+
+			<div id="main" class="row">
+				<nav class="col-md-3">
+					<ul>
+						<li class=""><a href="index.html"><i class="glyphicon glyphicon-dashboard"></i>Dashboard</a></li>
+						<li class="active"><a href="#"><i class="glyphicon glyphicon-calendar"></i>Schedule</a>
+                            <span class="badge alert-info">4</span>
+                        </li>
+						<li class=""><a href="#"><i class="glyphicon glyphicon-book"></i>Charts</a></li>
+						<li class=""><a href="#"><i class="glyphicon glyphicon-picture"></i>Tables</a></li>
+						<li class=""><a href="#"><i class="glyphicon glyphicon-list-alt"></i>Forms</a>
+                            <span class="badge alert-warning">3</span>
+                        </li>
+						<li class=""><a href="#"><i class="glyphicon glyphicon-user"></i>Users</a></li>
+					</ul>
+				</nav>
+
+				<div id="content" class="col-md-9 red-content">
+
+					<!-- title panel -->
+					<div id="title_panel">
+						<h3>Schedule</h3>
+					</div>
+
+					<!-- content -->
+					<div>
+
+                        <p>
+                            To schecule your events we chose <a target="_blank" href="http://fullcalendar.io">FullCalendar</a> which is a jQuery plugin that provides a full-sized, drag & drop calendar like the one below. It uses AJAX to fetch events on-the-fly for each month and is easily configured to use your own feed format (an extension is provided for Google Calendar). It is visually customizable and exposes hooks for user-triggered events (like clicking or dragging an event)
+                        </p>
+
+                        <hr/>
+                        <div id='calendar'></div>
+					</div>
+				</div>
+			</div>
+
+			<footer>
+				Copyright to <a href="http://www.mycodee.com">MyCodee</a>
+			</footer>
+
+	</body>
+
+</html>
