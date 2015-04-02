@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="description" content="OIPULES admin panel" />
+	    <meta name="abstract" content="OIPULES admin panel" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="fav_icon.ico" rel="shortcut icon" type="image/x-icon" />
+
+		<title>OPILUS - Charts</title>
+
+		<!-- load css -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+		<link rel="stylesheet" media="all" type="text/css" href="css/style.css" />
+
+
+        <!-- load fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+
+        <!-- Latest compiled and minified JavaScript -->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+	</head>
+
+	<body>
+			<header>
+				<div id="index_menu">
+
+				</div>
+
+				<div id="tool_bar">
+					<p class="title">
+						Opilus Admin Panel
+					</p>
+
+
+					<ul class="menu">
+                        <li><input type="search" class="searchBox" placeholder="Search.."/></li>
+						<li><a href="#">Help Support</a></li>
+						<li><a href="#">Settings</a></li>
+						<li class="active"><img src="images/john_doe.jpg"/><a href="#">Mohanad Kaleia</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-off"></i></a></li>
+					</ul>
+				</div>
+			</header>
+
+
+
+			<div id="main" class="row">
+				<nav class="col-md-3">
+					<ul>
+						<li class=""><a href="index.html"><i class="glyphicon glyphicon-dashboard"></i>Dashboard</a></li>
+						<li class=""><a href="#"><i class="glyphicon glyphicon-calendar"></i>Schedule</a>
+                            <span class="badge alert-info">4</span>
+                        </li>
+						<li class="active"><a href="#"><i class="glyphicon glyphicon-book"></i>Charts</a></li>
+						<li class=""><a href="#"><i class="glyphicon glyphicon-picture"></i>Tables</a></li>
+						<li class=""><a href="#"><i class="glyphicon glyphicon-list-alt"></i>Forms</a>
+                            <span class="badge alert-warning">3</span>
+                        </li>
+						<li class=""><a href="#"><i class="glyphicon glyphicon-user"></i>Users</a></li>
+					</ul>
+				</nav>
+
+				<div id="content" class="col-md-9 red-content">
+
+					<!-- title panel -->
+					<div id="title_panel">
+						<h3>Charts</h3>
+					</div>
+
+					<!-- content -->
+					<div>
+
+                        <p>
+                            To schecule your events we chose <a target="_blank" href="http://fullcalendar.io">FullCalendar</a> which is a jQuery plugin that provides a full-sized, drag & drop calendar like the one below. It uses AJAX to fetch events on-the-fly for each month and is easily configured to use your own feed format (an extension is provided for Google Calendar). It is visually customizable and exposes hooks for user-triggered events (like clicking or dragging an event)
+                        </p>
+
+                        <hr/>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="panel panel-default">
+                                  <div class="panel-heading">Line chart</div>
+                                  <div class="panel-body">
+                                      <!-- line chart -->
+                                      <div id="lineChart" style="height: 250px;"></div>
+                                  </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="panel panel-default">
+                                  <div class="panel-heading">Line & area chart</div>
+                                  <div class="panel-body">
+                                      <!-- line and area chart -->
+                                      <div id="areaChart" style="height: 250px;"></div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="panel panel-default">
+                                  <div class="panel-heading">Bar chart</div>
+                                  <div class="panel-body">
+                                      <!-- Bar chart -->
+                                      <div id="barChart" style="height: 250px;"></div>
+                                  </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="panel panel-default">
+                                  <div class="panel-heading">Donut chart</div>
+                                  <div class="panel-body">
+                                      <!-- Donut chart -->
+                                      <div id="donutDonut" style="height: 250px;"></div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+					</div>
+				</div>
+			</div>
+
+			<footer>
+				Copyright to <a href="http://www.mycodee.com">MyCodee</a>
+			</footer>
+
+	</body>
+
+   <script>
+
+       //line chart
+        new Morris.Line({
+          // ID of the element in which to draw the chart.
+          element: 'lineChart',
+          // Chart data records -- each entry in this array corresponds to a point on
+          // the chart.
+          data: [
+            { year: '2008', value: 20 },
+            { year: '2009', value: 10 },
+            { year: '2010', value: 5 },
+            { year: '2011', value: 5 },
+            { year: '2012', value: 20 }
+          ],
+          // The name of the data record attribute that contains x-values.
+          xkey: 'year',
+          // A list of names of data record attributes that contain y-values.
+          ykeys: ['value'],
+          // Labels for the ykeys -- will be displayed when you hover over the
+          // chart.
+          labels: ['Value']
+        });
+
+
+       //area chart
+       Morris.Area({
+          element: 'areaChart',
+          data: [
+            { y: '2006', a: 25, b: 10 },
+            { y: '2007', a: 50,  b: 40 },
+            { y: '2008', a: 55,  b: 40 },
+            { y: '2009', a: 75,  b: 65 },
+            { y: '2010', a: 50,  b: 40 },
+            { y: '2011', a: 75,  b: 65 },
+            { y: '2012', a: 100, b: 90 }
+          ],
+          xkey: 'y',
+          ykeys: ['a', 'b'],
+          labels: ['Series A', 'Series B'],
+          resize: true
+
+        });
+
+       //bar chart
+       Morris.Bar({
+          element: 'barChart',
+          data: [
+            { y: '2006', a: 100, b: 90 },
+            { y: '2007', a: 75,  b: 65 },
+            { y: '2008', a: 50,  b: 40 },
+            { y: '2009', a: 75,  b: 65 },
+            { y: '2010', a: 50,  b: 40 },
+            { y: '2011', a: 75,  b: 65 },
+            { y: '2012', a: 100, b: 90 }
+          ],
+          xkey: 'y',
+          ykeys: ['a', 'b'],
+          labels: ['Series A', 'Series B']
+        });
+
+
+       //Donut chart
+       Morris.Donut({
+          element: 'donutDonut',
+          data: [
+            {label: "Download Sales", value: 12},
+            {label: "In-Store Sales", value: 30},
+            {label: "Mail-Order Sales", value: 20}
+          ]
+        });
+
+    </script>
+</html>
