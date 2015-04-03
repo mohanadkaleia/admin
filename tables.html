@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="description" content="OIPULES admin panel" />
+	    <meta name="abstract" content="OIPULES admin panel" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="fav_icon.ico" rel="shortcut icon" type="image/x-icon" />
+
+		<title>OPILUS control panel V0.1</title>
+
+		<!-- load css -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+		<link rel="stylesheet" media="all" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" media="all" type="text/css" href="css/gridview.css" />
+
+
+        <!-- load fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+
+        <!-- Latest compiled and minified JavaScript -->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	</head>
+
+	<body>
+			<header>
+				<div id="index_menu">
+
+				</div>
+
+				<div id="tool_bar">
+					<p class="title">
+						Opilus Admin Panel
+					</p>
+
+
+					<ul class="menu">
+                        <li><input type="search" class="searchBox" placeholder="Search.."/></li>
+						<li><a href="#">Help Support</a></li>
+						<li><a href="#">Settings</a></li>
+						<li class="active"><img src="images/john_doe.jpg"/><a href="#">Mohanad Kaleia</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-off"></i></a></li>
+					</ul>
+				</div>
+			</header>
+
+
+
+			<div id="main" class="row">
+				<nav class="col-md-3">
+					<ul>
+						<li class=""><a href="idnex.html"><i class="glyphicon glyphicon-dashboard"></i>Dashboard</a></li>
+						<li class=""><a href="schedule.html"chart><i class="glyphicon glyphicon-calendar"></i>Schedule</a>
+                            <span class="badge alert-info">4</span>
+                        </li>
+						<li class=""><a href="charts.html"><i class="glyphicon glyphicon-book"></i>Charts</a></li>
+						<li class="active"><a href="#"><i class="glyphicon glyphicon-picture"></i>Tables</a></li>
+						<li class=""><a href="#"><i class="glyphicon glyphicon-list-alt"></i>Forms</a>
+                            <span class="badge alert-warning">3</span>
+                        </li>
+						<li class=""><a href="#"><i class="glyphicon glyphicon-user"></i>Users</a></li>
+					</ul>
+				</nav>
+
+				<div id="content" class="col-md-9 red-content">
+
+					<!-- title panel -->
+					<div id="title_panel">
+						<h3>Tables</h3>
+					</div>
+
+					<!-- content -->
+					<div>
+
+                        <p>
+                            You can create a good looking tables with or without control bar for big datatables, with grid.css you only have to add <b>grid</b> class to your table.
+                        </p>
+
+                        <div class="panel panel-default">
+                          <div class="panel-heading">Table - striped</div>
+                          <div class="panel-body">
+                              <div class="grid">
+                                  <table class="table table-striped">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Username</th>
+                                    </tr>
+
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Mohanad</td>
+                                        <td>Kaleia</td>
+                                        <td>m_kaliea</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Jone</td>
+                                        <td>Doe</td>
+                                        <td>jdoe</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Elma</td>
+                                        <td>Sirim</td>
+                                        <td>elma</td>
+                                    </tr>
+                                </table>
+                              </div>
+
+                          </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                          <div class="panel-heading">Table - pagination bar</div>
+                          <div class="panel-body">
+                              <div class="grid">
+                                  <table class="table table-striped">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Username</th>
+                                    </tr>
+
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Mohanad</td>
+                                        <td>Kaleia</td>
+                                        <td>m_kaliea</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Jone</td>
+                                        <td>Doe</td>
+                                        <td>jdoe</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Elma</td>
+                                        <td>Sirim</td>
+                                        <td>elma</td>
+                                    </tr>
+                                </table>
+
+                                <div id="grid_bar" class="well well-sm">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <a class="btn btn-info" href="#">
+                                            <i class="glyphicon glyphicon-plus-sign glyphicon-white"></i> Add
+                                            </a>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <span class="grid-pagination">1-5</span>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div>
+                                                <ul class="pagination pagination-centered grid-pagination">
+                                                    <li class="active" title="Prev"><a>« Prev</a></li>
+                                                    <li class="" title="Next"><a>Next »</a></li>
+                                                    <li class=""><input id="page_number" class="form-control" type="text" value="1"></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="input-group grid-search">
+                                                <input class="form-control" id="grid_search" type="text">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                              </div>
+
+                          </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+
+			<footer>
+				Copyright to <a href="http://www.computech-sy.com">CompuTech Group</a>
+			</footer>
+
+	</body>
+
+</html>
