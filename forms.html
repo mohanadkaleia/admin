@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
 		<link rel="stylesheet" media="all" type="text/css" href="css/style.css" />
         <link rel="stylesheet" media="all" type="text/css" href="css/gridview.css" />
-
+        <link rel="stylesheet" media="all" type="text/css" href="css/bootstrap-datepicker3.min.css"/>
 
         <!-- load fonts -->
         <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
@@ -27,6 +27,8 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script src="js/bootstrap-datepicker.min.js"></script>
+
 	</head>
 
 	<body>
@@ -79,7 +81,7 @@
 					<!-- content -->
 					<div>
                         <p>
-                            In Opilus template we depend on Bootsrap's forms because its flexibility, fancy looking and easy to use.
+                            In Opilus template we depend on Bootsrap's forms because its flexibility, fancy looking and easy to use. In addition to give you full form controls we support <b>Opilus</b> template with date picker that is supported by bootstrap.
                         </p>
 
                         <a href="#myModal" role="button" class="btn btn-default" data-toggle="modal">Launch demo modal</a>
@@ -405,6 +407,97 @@
                                 </div>
                             </div>
                             <!-- Row end -->
+
+
+                        <div class="row">
+                            <div class='col-sm-6'>
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading clearfix">
+                                         <h3 class="panel-title">Date Picker</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <input type="text" type="text" class="form-control" id="simpleDatePicker">
+                                    </div>
+
+                                <script type="text/javascript">
+                                    $('#simpleDatePicker').datepicker({
+                                    });
+                                </script>
+                                </div>
+                            </div>
+
+                            <div class='col-sm-6'>
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading clearfix">
+                                         <h3 class="panel-title">Date Picker Component</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="input-group date" id="datePickerComponent">
+                                          <input type="text" class="form-control" >
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                                        </div>
+                                    </div>
+
+                                <script type="text/javascript">
+                                    $('#datePickerComponent').datepicker({
+                                    });
+                                </script>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="row">
+                                <div class='col-sm-6'>
+
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading clearfix">
+                                             <h3 class="panel-title">Date Picker - Range</h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="input-daterange input-group">
+                                                <input type="text" class="input-sm form-control" name="start" id="datepickerStart"/>
+                                                <span class="input-group-addon">to</span>
+                                                <input type="text" class="input-sm form-control" name="end" id="datepickerEnd"/>
+                                            </div>
+                                        </div>
+
+                                    <script type="text/javascript">
+                                        $('#datepickerStart').datepicker({
+                                        });
+
+                                        $('#datepickerEnd').datepicker({
+                                        });
+                                    </script>
+                                    </div>
+                                </div>
+
+                                <div class='col-sm-6'>
+
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading clearfix">
+                                             <h3 class="panel-title">Date Picker</h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="input-group date" id="datePickerInline">
+
+                                            </div>
+                                        </div>
+
+                                    <script type="text/javascript">
+                                        $('#datePickerInline').datepicker({
+                                        });
+                                    </script>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
 
 					</div>
 				</div>
