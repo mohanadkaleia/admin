@@ -1,0 +1,56 @@
+OPILUS HTML\CSS template
+=========================
+
+First of all thanks to buy OPILUS admin template, we hope to satisfy your needs, in this file you can find a help to setup
+your work with OPILUS template:
+
+Template folder hirarichy:
+--------------------------
+The template is organised as following:
+OPILUS---
+        |--- CSS --- 
+                    |--- style.css : this is the main css style file for the template
+                    |--- FullCalendar.css and FullCalendar.print.css these two files are used for calendar
+                    |--- gridview.css this css file is used for the table with pagination feature (check the example in tables page)
+                    |--- bootstrap-datepicker3.mini.css this css file is used for datapicker
+                    |--- note bootstrap css files are been fetched from cdnjs
+        |--- JS ---
+                    |--- bootstrap-datepicker.min.js for datepicker
+                    |--- fullcalendar.js for calendar
+                    |--- moments.js is used for calendar as well
+        |--- images: contain only template background and seach icon
+        
+        |--- HTML pages:
+                    |--- Index which represent the dashboard
+                    |--- Calendar which represent the calendar page
+                    |--- Charts which contain examples of charts
+                    |--- Tables which give an overview of tables that OPILUS support
+                    |--- Forms contain forms using bootstrap framework.
+        
+
+
+
+HTML Tmplate layout:
+--------------------
+OPILUS template layout consist of two columns, side bar which contain the navigation bar and the main content, 
+You can add your code into #content section.
+
+So if we want to draw the hirarichy it will be like this:
+
+Head: contain include section for css and js files
+Body --- 
+        |--- header
+                    |--- #index_menu which is the upper grey bar that does not contain any thing (as a border for the template)
+                    |--- #tool_bar which contain the site name (OPILUS) and menu (search - help - .. ,etc)                    
+        |--- main
+                    |--- nav which contain the sidebar menu (Dashboard - schedule - ... ,etc)
+                    |--- #Contnet
+                                |--- #title_panel: which contain the title of the page (ex. dashboard)
+                                |--- content div: which is contain the content of the page
+        |--- footer
+
+
+Help and support:
+-----------------
+For any help you can contact me on email:
+Mohanad Kaleia: ms.kaleia@gmail.com
