@@ -116,7 +116,7 @@ ul.menu li img
 
 #main
 {
-	background-color:#F2F2F0;
+	background-color:#474747;
 }
 
 #main nav
@@ -127,9 +127,9 @@ ul.menu li img
 
 #main nav ul li
 {
-	background-color:#F2F2EA;
+	background-color: #474747;
 	height: 50px;
-	border-bottom:1px solid #ddd;
+	border-bottom:1px dotted #222;
 	padding:15px;
 	font-family: ubuntu;
 }
@@ -140,7 +140,7 @@ ul.menu li img
 
 #main nav ul li.active , #main nav ul li:hover
 {
-	background-color:#fff;
+	background-color:#555;
 	cursor: pointer;
 }
 
@@ -151,7 +151,7 @@ ul.menu li img
 
 #main nav ul li a
 {
-	color:#555;
+	color:white;
 	text-decoration: none;
 }
 
@@ -201,6 +201,7 @@ ul.menu li img
 	min-height:450px;
 	padding-left:0px;
 	padding-right:0px;
+    background-color:#F2F2F2;
 }
 
 #content #title_panel
