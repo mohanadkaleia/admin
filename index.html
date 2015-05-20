@@ -13,7 +13,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
-        <!--<link rel="stylesheet" href="css/waves.min.css">-->
+        <link rel="stylesheet" href="css/waves.min.css">
 		<link rel="stylesheet" media="all" type="text/css" href="css/style.css" />
         <link rel="stylesheet" media="all" type="text/css" href="css/gridview.css" />
         <link rel="stylesheet" media="all" type="text/css" href="css/bootstrap-datepicker3.min.css"/>
@@ -25,23 +25,33 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
-        <!--<script src="js/waves.min.js"></script>-->
+        <script src="js/waves.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <script src="js/bootstrap-datepicker.min.js"></script>
 	</head>
 
 	<body>
         <div id="tool_bar" class="container-fluid row">
-            <ul class="title col-md-3">
-                <li><h1>Opilus Admin Panel</h1></li>
-                <li class="ripplelink"><a href="#"><i class="fa fa-bars"></i></a></li>
+            <ul class="title col-md-2">
+                <li class="site-icon"><i class="fa fa-code"></i></li>
+                <li><h1>OPILUS</h1></li>
+                <li class="waves-effect waves-button waves-classic"><a href="#"><i class="fa fa-bars"></i></a></li>
             </ul>
 
-            <div class="col-md-9">
+            <div class="col-md-10">
                 <ul class="menu pull-right">
-                    <li class="waves-effect waves-button waves-classic"><a href="#"><i class="fa fa-cogs"></i></a></li>
-                    <li class="waves-effect waves-button waves-classic">
-                        <a href="#">
+                    <li>
+                        <div id="searchBoxWrap">
+                          <form action="" autocomplete="on">
+                            <input id="search" name="search" type="text" placeholder="Type keywords here.."/>
+<!--                            <i class="fa fa-bars"><input id="search_submit" value="Rechercher" type="submit"/></i>-->
+                                <i class="glyphicon glyphicon-search searchIcon"></i>
+                          </form>
+                        </div>
+                    </li>
+                    <li><a href="#" class="waves-effect waves-button waves-classic"><i class="fa fa-cogs"></i></a></li>
+                    <li>
+                        <a href="#" class="waves-effect waves-button waves-classic">
                             <i class="glyphicon glyphicon-bell"><span class="badge badge-danger pull-right">3</span></i>
                         </a>
                     </li>
@@ -60,8 +70,8 @@
                             <li><a href="#">One more separated link</a></li>
                         </ul>
                     </li>
-                    <li class="waves-effect waves-button waves-classic">
-                        <a href="login.html"><i class="fa fa-sign-out"></i>  Log out</a>
+                    <li>
+                        <a href="login.html" class="waves-effect waves-button waves-classic"><i class="fa fa-sign-out"></i>  Log out</a>
                     </li>
                 </ul>
             </div>
@@ -325,6 +335,8 @@
               resize: true
 
             });
+
+            Waves.init();
 
         </script>
 	</body>
