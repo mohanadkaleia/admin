@@ -379,8 +379,8 @@ table.stats tr span {
   position: relative;
 }
 
-input[type="text"] {
-  height: 40px;
+#searchBoxWrap input[type="text"] {
+  height: 45px;
   font-size: 20px;
   display: inline-block;
   font-family: Ubuntu;
@@ -399,17 +399,17 @@ input[type="text"] {
   cursor: pointer;
 }
 
-input[type="text"]:focus:hover {
+#searchBoxWrap input[type="text"]:focus:hover {
   border-bottom: 1px solid #BBB;
 }
 
-input[type="text"]:focus {
+#searchBoxWrap input[type="text"]:focus {
   width: 300px;
   z-index: 1;
   border-bottom: 1px solid #BBB;
   cursor: text;
 }
-.searchIcon{
+#searchBoxWrap .searchIcon{
     padding-top: 20px;
     padding-left: 15px;
     pading-right: 15px;
@@ -422,6 +422,6 @@ input[type="text"]:focus {
     background:none;
 }
 
-.searchIcon:hover {
+#searchBoxWrap .searchIcon:hover {
   opacity: 0.8;
 }
