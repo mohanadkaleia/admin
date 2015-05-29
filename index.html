@@ -10,13 +10,15 @@
 		<title>OPILUS | Dashboard</title>
 
 		<!-- load css -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/reset.css" type="text/css" media="all"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
         <link rel="stylesheet" href="css/waves.min.css">
 		<link rel="stylesheet" media="all" type="text/css" href="css/style.css" />
         <link rel="stylesheet" media="all" type="text/css" href="css/gridview.css" />
         <link rel="stylesheet" media="all" type="text/css" href="css/bootstrap-datepicker3.min.css"/>
+        <link rel="stylesheet" media="all" type="text/css" href="css/slidebar.css"/>
 
         <!-- load fonts -->
         <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
@@ -26,6 +28,8 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
         <script src="js/waves.min.js"></script>
+        <script src="js/slidebar.js"></script>
+        <script src="js/main.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <script src="js/bootstrap-datepicker.min.js"></script>
 	</head>
@@ -44,7 +48,6 @@
                         <div id="searchBoxWrap">
                           <form action="" autocomplete="on">
                             <input id="search" name="search" type="text" placeholder="Type keywords here.."/>
-<!--                            <i class="fa fa-bars"><input id="search_submit" value="Rechercher" type="submit"/></i>-->
                                 <i class="glyphicon glyphicon-search searchIcon"></i>
                           </form>
                         </div>
@@ -52,7 +55,7 @@
                     <li><a href="#" class="waves-effect waves-button waves-classic"><i class="fa fa-cogs"></i></a></li>
                     <li>
                         <a href="#" class="waves-effect waves-button waves-classic">
-                            <i class="glyphicon glyphicon-bell"><span class="badge badge-danger pull-right">3</span></i>
+                            <i class="fa fa-bell-o"><span class="badge badge-danger pull-right">3</span></i>
                         </a>
                     </li>
                     <li class="dropdown">
@@ -61,22 +64,32 @@
                             <span>Mohanad Kaleia <i class="fa fa-angle-down"></i></span>
                         </a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="#"><i class="fa fa-user"></i> <span>Profile</span></a></li>
-                            <li><a href="#"><i class="fa fa-user-secret"></i> <span>Account</span></a></li>
-                            <li><a href="#"><i class="fa fa-key"></i> <span>Change Password</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#"><i class="fa fa-cog"></i> <span>Settings</span></a></li>
-                            <li class="divider"></li>
-                            <li><a href="#"><i class="fa fa-sign-out"></i> <span>Log Out</span></a></li>
+                            <li><a href="#"><span>Profile</span></i></a></li>
+                            <li><a href="#"><span>Settings</span><span class="badge badge-info">40%</span></a></li>
+                            <li><a href="#"><span>Support</span><span class="badge badge-roundless badge-success">new</span></a></li>
+                            <li><a href="#"><span>Log Out</span><i class="fa fa-sign-out"></i></a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="login.html" class="waves-effect waves-button waves-classic"><i class="fa fa-sign-out"></i>  Log out</a>
+                        <a href="#" class="waves-effect waves-button waves-classic cd-btn"><i class="fa fa-sliders"></i></a>
                     </li>
                 </ul>
             </div>
 
         </div>
+
+        <div class="cd-panel from-right">
+            <header class="cd-panel-header">
+                <h1>Settings</h1>
+                <a href="#0" class="cd-panel-close"><i class="fa fa-times-circle"></i></a>
+            </header>
+
+            <div class="cd-panel-container">
+                <div class="cd-panel-content">
+                    <p>Hello side bar.</p>
+                </div> <!-- cd-panel-content -->
+            </div> <!-- cd-panel-container -->
+        </div> <!-- cd-panel -->
 
         <div id="main" class="container-fluid row">
             <nav class="col-md-2">
