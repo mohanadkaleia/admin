@@ -24,19 +24,26 @@ li {
 }
 
 #tool_bar {
-	height:50px;
+	height:60px;
 	color:#333;
 	font-family:ubuntu;
     margin-bottom:10px;
     position: relative;
     z-index: 1000;
     margin: 0;
+    padding:0;
+}
+
+#tool_bar ul.title {
+	background-color:#32323A;
+	border-bottom:1px solid #444;
+	margin-bottom:-1px;
 }
 
 #tool_bar  ul.title >li {
 	float:left;
-    height:50px;
-	padding-top:15px;
+	height: 60px;
+	padding-top:22px;
 	padding-right:15px
 }
 
@@ -45,22 +52,16 @@ li {
 }
 
 #tool_bar  ul.title >li.site-icon {
-    color:cadetblue;
+    color:aquamarine;
     font-size: 20px;
     margin-top: -5px;
 }
-
-#tool_bar  ul.title >li.site-icon {
-    color:cadetblue;
-    font-size: 18px;
-
-}
-
 
 #tool_bar  ul.title >li > h1 {
 	margin:0;
 	padding:0;
 	font-size:18px;
+    color:white;
 }
 
 #tool_bar > ul.menu
@@ -77,8 +78,8 @@ li {
 {
 	color:#333;
 	text-decoration: none;
-    height: 50px;
-	padding-top:20px;
+    height: 60px;
+	padding-top:25px;
 	padding-left:15px;
 	padding-right:15px;
 }
@@ -149,6 +150,11 @@ li {
 	padding-bottom:10px;
 }
 
+/* main content */
+#main {
+    background-color: #32323A;
+}
+
 #main nav
 {
     padding-left:0px;
@@ -158,21 +164,19 @@ li {
 
 #main nav ul li
 {
-	background-color: #474747;
-	height: 50px;
-	border-bottom:1px dotted #222;
-	padding:15px;
+    height:60px;
 	font-family: ubuntu;
+    background-color:#32323A;
 }
 
 #main nav ul li span {
     float:right;
 }
 
-#main nav ul li.active , #main nav ul li:hover
+#main nav ul li.active a
 {
-	background-color:#555;
-	cursor: pointer;
+    background-color:#29282E;
+    color:aquamarine;
 }
 
 #main nav ul li i
@@ -182,8 +186,20 @@ li {
 
 #main nav ul li a
 {
-	color:white;
+	color: darkslategrey;
 	text-decoration: none;
+	height: 60px;
+	padding-top: 20px;
+	padding-left:15px;
+	margin:0px;
+	position:relative;
+	display:block;
+    color:azure;
+}
+
+#main nav ul li a:hover {
+	color:aquamarine;
+    cursor: pointer;
 }
 
 #main nav ul li img
@@ -359,6 +375,7 @@ table.stats tr span {
     height: 18px;
     padding: 3px 6px 3px 6px;
     text-shadow: none !important;
+    margin-right:20px;
 }
 
 .badge.badge-roundless {
