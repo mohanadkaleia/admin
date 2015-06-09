@@ -32,17 +32,18 @@
         <script src="js/main.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <script src="js/bootstrap-datepicker.min.js"></script>
+        <script src="js/general.js"></script>
 	</head>
 
 	<body>
         <div id="tool_bar" class="container-fluid row">
-            <ul class="title col-md-2">
+            <ul class="title col-md-2 col-xs-12">
                 <li class="site-icon"><i class="fa fa-code"></i></li>
                 <li><h1>OPILUS</h1></li>
-                <li class="waves-effect waves-button waves-classic"><a href="#"><i class="fa fa-bars"></i></a></li>
+                <li class="waves-effect waves-button waves-classic nav-minimize" id="collapse-button"><a href="#"><i class="fa fa-bars"></i></a></li>
             </ul>
 
-            <div class="col-md-10">
+            <div class="col-md-10 col-xs-12" id="user-menu">
                 <ul class="menu pull-right">
                     <li>
                         <div id="searchBoxWrap">
@@ -94,25 +95,43 @@
         <div id="main" class="container-fluid row">
             <nav class="col-md-2">
                 <ul>
-                    <li class="active"><a href="#"><i class="glyphicon glyphicon-dashboard"></i>Dashboard</a></li>
+                    <li class="active">
+                        <a href="#"><i class="glyphicon glyphicon-dashboard"></i>
+                            <span class="item-title">Dashboard</span>
+                        </a>
+                    </li>
                     <li class="">
-                        <a href="schedule.html"chart><i class="glyphicon glyphicon-calendar"></i>Schedule
+                        <a href="schedule.html"chart><i class="glyphicon glyphicon-calendar"></i>
+                            <span class="item-title">Schedule</span>
                             <span class="badge alert-info">4</span>
                         </a>
                     </li>
-                    <li class=""><a href="charts.html"><i class="glyphicon glyphicon-book"></i>Charts</a></li>
-                    <li class=""><a href="tables.html"><i class="glyphicon glyphicon-picture"></i>Tables</a></li>
                     <li class="">
-                        <a href="forms.html"><i class="glyphicon glyphicon-list-alt"></i>Forms
+                        <a href="charts.html"><i class="glyphicon glyphicon-book"></i>
+                            <span class="item-title">Charts</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="tables.html"><i class="glyphicon glyphicon-picture"></i>
+                            <span class="item-title">Tables</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="forms.html"><i class="glyphicon glyphicon-list-alt"></i>
+                            <span class="item-title">Forms</span>
                             <span class="badge badge-roundless badge-success">new</span>
                         </a>
                     </li>
-                    <li class=""><a href="userprofile.html"><i class="glyphicon glyphicon-user"></i>Users</a></li>
+                    <li class="">
+                        <a href="userprofile.html">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <span class="item-title">Users</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
 
             <div id="content" class="col-md-10 red-content">
-
                 <!-- title panel -->
                 <div id="title_panel">
                     <h3>Dashboard</h3>
@@ -327,12 +346,13 @@
 
 
                 </div>
+                <footer>
+                    2015 © OPILUS by <a href="http://www.mycodee.com">MyCodee</a>
+                </footer>
             </div>
         </div>
 
-        <footer>
-            Designed by <a href="http://www.mycodee.com">MyCodee</a>
-        </footer>
+
 
         <script>
            Morris.Area({
